@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: dxg58hjin-java-springboot
+  janus-idp.io/tekton: dxg58hjin-java-springboot
+  backstage.io/kubernetes-id: dxg58hjin-java-springboot
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: dxg58hjin-java-springboot
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
